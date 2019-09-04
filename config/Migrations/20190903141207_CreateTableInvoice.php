@@ -16,6 +16,7 @@ class CreateTableInvoice extends AbstractMigration
             ->addColumn('company', 'string', ['null' => false])
             ->addColumn('address', 'text', ['null' => false])
             ->addColumn('email', 'string', ['null' => false])
+            ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'] )
             ->create();
     }
 

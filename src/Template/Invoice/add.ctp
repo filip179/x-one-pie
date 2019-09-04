@@ -4,24 +4,27 @@
  * @var \App\Model\Entity\Invoice $invoice
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Invoice'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
 <div class="invoice form large-9 medium-8 columns content">
     <?= $this->Form->create($invoice) ?>
     <fieldset>
-        <legend><?= __('Add Invoice') ?></legend>
-        <?php
-            echo $this->Form->control('code');
-            echo $this->Form->control('total');
-            echo $this->Form->control('company');
-            echo $this->Form->control('address');
-            echo $this->Form->control('email');
-        ?>
+        <legend>Dodaj nową fakturę</legend>
+        <div class="form-group">
+            <?= $this->Form->control('code', ['class' => 'form-control', 'label'=>'Kod']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->Form->control('total', ['class' => 'form-control', 'label'=>'Kwota']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->Form->control('company', ['class' => 'form-control', 'label'=>'Firma']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->Form->control('address', ['class' => 'form-control', 'label'=>'Adres']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->Form->control('email', ['class' => 'form-control', 'label'=>'E-mail']) ?>
+        </div>
+
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-lg btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>
