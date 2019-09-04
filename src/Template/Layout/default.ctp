@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="perfect-scrollbar-on">
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,13 @@
 
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css('home.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
-<body>
+<body class>
 
 <div class="wrapper">
     <div class="sidebar" data-color="purple" data-background-color="white">
@@ -45,8 +46,19 @@
             </ul>
         </div>
     </div>
-
     <div class="main-panel">
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                </button>
+
+            </div>
+        </nav>
         <div class="content">
             <?= $this->fetch('content') ?>
         </div>
@@ -54,6 +66,7 @@
 
     <footer>
     </footer>
+
 </div>
 <script type="text/javascript" src="/js/core/jquery.min.js"></script>
 <script type="text/javascript" src="/js/core/popper.min.js"></script>

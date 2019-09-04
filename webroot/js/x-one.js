@@ -1,12 +1,16 @@
 $(document).ready(function () {
-    var options = {
-        chartPadding:30,
-        axisY: {
-            onlyInteger: true,
-            stretch: true
+    (function() {
+        var options = {
+            chartPadding: 30,
+            axisY: {
+                onlyInteger: true,
+                stretch: true
+            }
+        };
+        if (typeof data !== 'undefined') {
+            new Chartist.Line('.ct-chart', data, options);
         }
-    };
-    new Chartist.Line('.ct-chart', data, options);
+    })();
 
     $('#invoice-table').DataTable({
         processing: true,
