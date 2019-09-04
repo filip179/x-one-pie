@@ -8,27 +8,13 @@
 <div class="row">
     <div class="col-lg-12 col-md-12">
         <div class="card">
-            <div class="card-header card-header-primary">
-                <h4 class="card-title">Faktury</h4>
-                <a href="/invoice/create"><i class="material-icons" style="color:white;">add</i></a>
-            </div>
-            <div class="card-body table-responsive">
-                <table id="invoice-table" class="table">
-                    <thead class="text-warning">
-                    <tr>
-                        <th width="5%">#</th>
-                        <th>Kod</th>
-                        <th>Total</th>
-                        <th>Company</th>
-                        <th>Address</th>
-                        <th>E-mail</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
+            <div class="ct-chart ct-perfect-fourth"></div>
+            <script>
+                var data = {
+                    labels: <?= json_encode(array_keys($data))?>,
+                    series: [<?= json_encode(array_values($data)) ?>]
+                };
+            </script>
         </div>
     </div>
 </div>
