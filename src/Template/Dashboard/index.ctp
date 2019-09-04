@@ -5,9 +5,12 @@
  */
 
 ?>
+
 <div class="row">
     <div class="col-lg-12 col-md-12">
+        <legend>Faktur /dzień </legend>
         <div class="card">
+
             <div class="ct-chart ct-perfect-fourth"></div>
             <script>
                 var data = {
